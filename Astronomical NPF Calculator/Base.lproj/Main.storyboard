@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Astronomical_NPF_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1200" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="scrollableAxes" translatesAutoresizingMaskIntoConstraints="NO" id="psh-Ak-kmU">
+                                <rect key="frame" x="0.0" y="44" width="1200" height="734"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mri-yy-Yjo" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="1200" height="734"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Astronomical NPF Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCU-5f-04D" userLabel="Astronomical NPF Calculator Label">
+                                                <rect key="frame" x="452" y="20" width="296.33333333333326" height="28.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sensor's size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJV-pa-nzc" userLabel="Sensor's size Label">
+                                                <rect key="frame" x="549.66666666666663" y="142.66666666666666" width="100.66666666666663" height="20.333333333333343"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Qn-u4-UbB" userLabel="Pixel's dimension Text Field">
+                                                <rect key="frame" x="584" y="523.66666666666663" width="32" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lens Data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQG-I9-7ep" userLabel="Lens Data Label">
+                                                <rect key="frame" x="166.66666666666666" y="98.666666666666657" width="87.333333333333343" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="noe-iA-62F" userLabel="Results Stack View">
+                                                <rect key="frame" x="521.33333333333337" y="587.66666666666663" width="157.66666666666663" height="115.33333333333337"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPd-Xo-K7W" userLabel="Calculate Button">
+                                                        <rect key="frame" x="29.666666666666629" y="0.0" width="98" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                        <state key="normal" title="Calculate"/>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exposure time (NPF)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOF-Y8-W45" userLabel="Exposure time Label">
+                                                        <rect key="frame" x="0.0" y="51" width="157.66666666666666" height="20.333333333333329"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hc4-TA-KdU" userLabel="Exposure time Text Field">
+                                                        <rect key="frame" x="62.666666666666629" y="81.333333333333371" width="32" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <pickerView contentMode="center" semanticContentAttribute="spatial" translatesAutoresizingMaskIntoConstraints="NO" id="zUr-Xc-ZAq">
+                                                <rect key="frame" x="440" y="173" width="320" height="216"/>
+                                                <viewLayoutGuide key="safeArea" id="swi-yC-JE0"/>
+                                            </pickerView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="boe-YL-PyB" userLabel="Number of pixel Text Field">
+                                                <rect key="frame" x="584" y="439.33333333333331" width="32" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DSLR data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8TA-0H-Uad" userLabel="DSLR data Label">
+                                                <rect key="frame" x="554" y="98.666666666666657" width="92.333333333333371" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pixel's dimension (micron)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVS-7s-aWZ" userLabel="Pixel's dimension Label">
+                                                <rect key="frame" x="500" y="493.33333333333337" width="200" height="20.333333333333371"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of pixels width" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcl-Gc-b2Y" userLabel="Number of pixels width Label">
+                                                <rect key="frame" x="512" y="409" width="176" height="20.333333333333314"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tbj-Kj-Zmq" userLabel="Lens Data Stack View">
+                                                <rect key="frame" x="70" y="142.66666666666666" width="280.66666666666669" height="64.333333333333343"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="DWc-xK-tGR">
+                                                        <rect key="frame" x="0.0" y="0.0" width="280.66666666666669" height="20.333333333333332"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Focal length (mm)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IwV-1c-ela" userLabel="Focal length Label">
+                                                                <rect key="frame" x="0.0" y="0.0" width="139.33333333333334" height="20.333333333333332"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aperture (f\)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6L-IY-4qb" userLabel="Aperture Label">
+                                                                <rect key="frame" x="185.33333333333334" y="0.0" width="95.333333333333343" height="20.333333333333332"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="132" translatesAutoresizingMaskIntoConstraints="NO" id="noQ-6M-id8">
+                                                        <rect key="frame" x="42.333333333333314" y="30.333333333333343" width="196" height="34"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Ma-sQ-ubq" userLabel="Focal length Text Field">
+                                                                <rect key="frame" x="0.0" y="0.0" width="32" height="34"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I3t-Ef-bsU" userLabel="Aperture Text Field">
+                                                                <rect key="frame" x="164" y="0.0" width="32" height="34"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accuracy and declination" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9YW-4Q-9BW" userLabel="Accuracy and declination Label">
+                                                <rect key="frame" x="946.33333333333337" y="98.666666666666657" width="218.66666666666663" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Vdd-bW-Jzy" userLabel="Declination Stack View">
+                                                <rect key="frame" x="1000.6666666666666" y="142.66666666666666" width="109.66666666666663" height="64.333333333333343"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Declination (°)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1F8-oI-Zkv" userLabel="Declination Label">
+                                                        <rect key="frame" x="0.0" y="0.0" width="109.66666666666667" height="20.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="28S-qa-y1X" userLabel="Declination Text Field">
+                                                        <rect key="frame" x="39.000000000000114" y="30.333333333333343" width="32" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="UQG-I9-7ep" firstAttribute="trailing" secondItem="8TA-0H-Uad" secondAttribute="leading" constant="-300" id="0ah-wg-IwH"/>
+                                            <constraint firstItem="UQG-I9-7ep" firstAttribute="centerY" secondItem="8TA-0H-Uad" secondAttribute="centerY" id="1Mw-n7-E8G"/>
+                                            <constraint firstItem="hcl-Gc-b2Y" firstAttribute="top" secondItem="zUr-Xc-ZAq" secondAttribute="bottom" constant="20" id="5nn-x8-JFJ"/>
+                                            <constraint firstItem="8TA-0H-Uad" firstAttribute="top" secondItem="gCU-5f-04D" secondAttribute="bottom" constant="50" id="7bR-SI-vbD"/>
+                                            <constraint firstItem="8Qn-u4-UbB" firstAttribute="centerX" secondItem="Mri-yy-Yjo" secondAttribute="centerX" id="8CM-2c-EmU"/>
+                                            <constraint firstItem="boe-YL-PyB" firstAttribute="centerX" secondItem="Mri-yy-Yjo" secondAttribute="centerX" id="A04-8h-9qH"/>
+                                            <constraint firstItem="Vdd-bW-Jzy" firstAttribute="centerX" secondItem="9YW-4Q-9BW" secondAttribute="centerX" id="BcL-q0-2Ts"/>
+                                            <constraint firstItem="gCU-5f-04D" firstAttribute="top" secondItem="Mri-yy-Yjo" secondAttribute="top" constant="20" id="FsD-AR-XNV"/>
+                                            <constraint firstItem="AVS-7s-aWZ" firstAttribute="top" secondItem="boe-YL-PyB" secondAttribute="bottom" constant="20" id="Fzf-2w-g5N"/>
+                                            <constraint firstItem="9YW-4Q-9BW" firstAttribute="centerY" secondItem="8TA-0H-Uad" secondAttribute="centerY" id="G2U-Rf-pIF"/>
+                                            <constraint firstItem="UJV-pa-nzc" firstAttribute="top" secondItem="8TA-0H-Uad" secondAttribute="bottom" constant="20" id="GKR-94-WUM"/>
+                                            <constraint firstItem="tbj-Kj-Zmq" firstAttribute="top" secondItem="UQG-I9-7ep" secondAttribute="bottom" constant="20" id="Hcf-R3-UCP"/>
+                                            <constraint firstItem="8TA-0H-Uad" firstAttribute="centerX" secondItem="Mri-yy-Yjo" secondAttribute="centerX" id="INy-hw-ZGZ"/>
+                                            <constraint firstItem="noe-iA-62F" firstAttribute="centerX" secondItem="Mri-yy-Yjo" secondAttribute="centerX" id="K3d-Rc-nFa"/>
+                                            <constraint firstItem="boe-YL-PyB" firstAttribute="top" secondItem="hcl-Gc-b2Y" secondAttribute="bottom" constant="10" id="Kha-tz-Peq"/>
+                                            <constraint firstItem="AVS-7s-aWZ" firstAttribute="centerX" secondItem="Mri-yy-Yjo" secondAttribute="centerX" id="SPb-BL-cP3"/>
+                                            <constraint firstItem="zUr-Xc-ZAq" firstAttribute="centerX" secondItem="Mri-yy-Yjo" secondAttribute="centerX" id="T7l-xK-OoD"/>
+                                            <constraint firstItem="9YW-4Q-9BW" firstAttribute="leading" secondItem="8TA-0H-Uad" secondAttribute="trailing" constant="300" id="UYa-mx-MYQ"/>
+                                            <constraint firstItem="gCU-5f-04D" firstAttribute="centerX" secondItem="Mri-yy-Yjo" secondAttribute="centerX" id="cv7-ch-PY0"/>
+                                            <constraint firstItem="8Qn-u4-UbB" firstAttribute="top" secondItem="AVS-7s-aWZ" secondAttribute="bottom" constant="10" id="fwE-qM-Z5y"/>
+                                            <constraint firstItem="8Qn-u4-UbB" firstAttribute="bottom" secondItem="noe-iA-62F" secondAttribute="top" constant="-30" id="kTK-FA-HYq"/>
+                                            <constraint firstItem="UJV-pa-nzc" firstAttribute="centerX" secondItem="Mri-yy-Yjo" secondAttribute="centerX" id="qu1-hp-nO9"/>
+                                            <constraint firstItem="hcl-Gc-b2Y" firstAttribute="centerX" secondItem="Mri-yy-Yjo" secondAttribute="centerX" id="sHi-T7-XT6"/>
+                                            <constraint firstItem="zUr-Xc-ZAq" firstAttribute="top" secondItem="UJV-pa-nzc" secondAttribute="bottom" constant="10" id="vRh-2i-JMP"/>
+                                            <constraint firstItem="Vdd-bW-Jzy" firstAttribute="top" secondItem="9YW-4Q-9BW" secondAttribute="bottom" constant="20" id="wd0-B1-2Mg"/>
+                                            <constraint firstItem="tbj-Kj-Zmq" firstAttribute="centerX" secondItem="UQG-I9-7ep" secondAttribute="centerX" id="wnC-1O-xB7"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Mri-yy-Yjo" secondAttribute="trailing" id="04b-Rm-vMB"/>
+                                    <constraint firstItem="Mri-yy-Yjo" firstAttribute="top" secondItem="psh-Ak-kmU" secondAttribute="top" id="0yT-pk-EPZ"/>
+                                    <constraint firstItem="Mri-yy-Yjo" firstAttribute="width" secondItem="psh-Ak-kmU" secondAttribute="width" id="Njc-Pd-o3L"/>
+                                    <constraint firstItem="Mri-yy-Yjo" firstAttribute="leading" secondItem="psh-Ak-kmU" secondAttribute="leading" id="PGO-a4-j42"/>
+                                    <constraint firstItem="Mri-yy-Yjo" firstAttribute="height" secondItem="psh-Ak-kmU" secondAttribute="height" id="aWs-rO-qH1"/>
+                                    <constraint firstAttribute="bottom" secondItem="Mri-yy-Yjo" secondAttribute="bottom" id="jdi-R6-UH1"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="psh-Ak-kmU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="36P-Li-Awl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="psh-Ak-kmU" secondAttribute="bottom" id="Php-OK-WvI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="psh-Ak-kmU" secondAttribute="trailing" id="YzG-fs-msk"/>
+                            <constraint firstItem="psh-Ak-kmU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cae-ht-a8R"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <size key="freeformSize" width="1200" height="812"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134.78260869565219" y="136.95652173913044"/>
+        </scene>
+    </scenes>
+</document>
