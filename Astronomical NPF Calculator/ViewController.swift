@@ -7,7 +7,8 @@
 //
 
 import UIKit
-var ExposureTime :Double = 0.0
+
+var ExposureTime : Double = 0.0
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
@@ -20,7 +21,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var AccuracyField: UITextField!
     @IBOutlet weak var CalculationValue: UILabel!
 
-//  @IBOutlet weak var Picker: UIPickerView!
     var SensorSizePickerView = UIPickerView()
     var AccuracyPickerView = UIPickerView()
     
@@ -30,6 +30,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func Calculate(_ sender: UIButton) {
         Calcul()
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -38,7 +39,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.NbpixelField.delegate = self
         self.PixDimField.delegate = self
         self.DeclinationField.delegate = self
-
+        self.SensorSizeField.delegate = self
+        
         self.SensorSizeField.inputView = SensorSizePickerView
         self.AccuracyField.inputView = AccuracyPickerView
         
@@ -51,10 +53,27 @@ class ViewController: UIViewController, UITextFieldDelegate {
         SensorSizePickerView.tag = 1
         AccuracyPickerView.tag = 2
         
+        //Mettre à jour PixDimField quand les champs SensorSizeField et NbpixelField sont remplis
+        if ((self.PixDimField.text!) != "") && ((self.SensorSizeField.text!) != "") && ((self.NbpixelField.text!) != ""){
+            let crop: Double = {
+                if ((self.SensorSizeField.text!) == SensorSize[2]){
+                    return 36*1000
+                } else if ((self.SensorSizeField.text!) == SensorSize[1]) {
+                    return 23.6*1000
+                } else {
+                    return 17.3*1000
+                }
+            }()
+            let Nbwidth : Double! = Double(NbpixelField.text!)
+            PixDimField.text = String(crop/Nbwidth)
+        }
+        //
     }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)//ca marche pas !!!!
     }
+    
     func hidekeyboard(){
         ApertureField.resignFirstResponder()
         FocalLengthField.resignFirstResponder()
@@ -62,14 +81,40 @@ class ViewController: UIViewController, UITextFieldDelegate {
         PixDimField.resignFirstResponder()
         DeclinationField.resignFirstResponder()
     }
+    
     func Calcul(){
-        if ((self.ApertureField.text!) != "") && ((self.FocalLengthField.text!) != "") && ((self.PixDimField.text!) != "") && ((self.DeclinationField.text!) != "") {
-            let N  = Double(ApertureField.text!)
-            let F  = Double(FocalLengthField.text!)
-            let P  = Double(PixDimField.text!)
-            let D  = Double(DeclinationField.text!)
-            ExposureTime = (16.856*Double(N!) + 0.010*Double(F!) + 13.713*Double(P!))/(Double(F!)*cos(Double(D!)*Double.pi/180))
+        if ((self.ApertureField.text!) != "") && ((self.FocalLengthField.text!) != "") && ((self.PixDimField.text!) != "") && ((self.DeclinationField.text!) != "") && ((self.SensorSizeField.text!) != "") && ((self.AccuracyField.text!) != ""){
+            let N : Double! = Double(ApertureField.text!)
+            let F : Double! = Double(FocalLengthField.text!)
+            let P : Double! = Double(PixDimField.text!)
+            let D : Double! = Double(DeclinationField.text!)
+            let crop: Double = {
+                if ((self.SensorSizeField.text!) == SensorSize[2]){
+                    return 36*1000
+                } else if ((self.SensorSizeField.text!) == SensorSize[1]) {
+                    return 23.6*1000
+                } else {
+                    return 17.3*1000
+                }
+            }()
+            let k: Double = {
+                if ((self.AccuracyField.text!) == Accuracy[2]){
+                    return 3.0
+                } else if ((self.AccuracyField.text!) == Accuracy[1]) {
+                    return 2.0
+                } else {
+                    return 1.0
+                }
+            }()
+            let dairy = 16.856*N
+            let dseeing = 0.010*F
+            let dbayer = 13.713*P
+            let num = (dairy + dseeing + dbayer)
+            let den = (Double(F!)*cos(Double(D!)*Double.pi/180))
+            ExposureTime = k * num/den
             print(ExposureTime)
+            print(k)
+            print(crop)
             return CalculationValue.text = String(round(ExposureTime*100)/100) + " s"
         
         } else {
